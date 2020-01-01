@@ -24,7 +24,7 @@ actions:
   status:
     # TODO: This action is required.
     # - script: vars.status = 'offline';
-     -vars.status = 'offline';   
+     - vars.status = 'offline';   
   logout: []
 
   
