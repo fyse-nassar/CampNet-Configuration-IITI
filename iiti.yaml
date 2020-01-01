@@ -22,9 +22,7 @@ actions:
           throw 'unknown: ' + resp;
         }
   status:
-    # TODO: This action is required.
      - script: vars.status = 'offline'
-
   logout: [ ]
 
   
