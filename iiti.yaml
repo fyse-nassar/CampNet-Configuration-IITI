@@ -23,17 +23,9 @@ actions:
         }
   status:
     # TODO: This action is required.
-    - url: https://go.ruc.edu.cn/
-      offcampus_if_failed: true
-      script: |
-        var matches = /uid='(\w+)'/.exec(resp);
-        if (matches) {
-          vars.status = 'online';
-          vars.online_username = matches[1];
-        } else {
           vars.status = 'offline';
-        }
+        
 
-  logout:
+  logout: [ ]
 
   
