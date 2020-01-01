@@ -1,0 +1,28 @@
+ssids:
+  - IITI
+  - IITI_2.4G
+
+decimal_units: true
+
+# Default vars:
+# - username
+# - password
+actions:
+  login:
+    - method: POST
+      url: http://10.100.100.253:8002/index.php?zone=iiti_auth
+      params:
+        redirurl: http://iiti.ac.in
+        zone: iiti_auth
+        auth_user: "{username}"
+        auth_pass: "{password}"
+        accept: Sign In
+      script: |
+        if (url != 'http://iiti.ac.in') {
+          throw 'unknown: ' + resp;
+        }
+  status:
+    # TODO: This action is required.
+    - script: |
+        vars.status = 'offline';   
+  logout: []
