@@ -23,7 +23,7 @@ actions:
         }
   status:
     # TODO: This action is required.
-          vars.status = 'offline';
+     - vars.status = 'offline';
         
 
   logout: [ ]
