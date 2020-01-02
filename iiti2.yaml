@@ -21,9 +21,6 @@ actions:
         if (!/iiti\.ac\.in/.test(url)) {
            throw 'unknown: url = ' + url
           }
-        else {
-            throw 'Too Big'
-        }
       
   status:
     # TODO: This action is required.
