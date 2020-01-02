@@ -24,6 +24,11 @@ actions:
       
   status:
     # TODO: This action is required.
-    - script: |
-        vars.status = 'offline';   
+    - url: http://captive.apple.com/hotspot-detect.html
+      script: |
+        if (/captive\.apple\.com/.test(url)) {
+          vars.status = 'online';
+        } else {
+          vars.status = 'offline';
+        }   
   logout: []
