@@ -21,9 +21,7 @@ actions:
        if (!/iiti\.ac\.in/.test(url)) {
            throw 'unknown: url = ' + url
         }
-       # if (url != 'http://iiti.ac.in') {
-        #  throw 'unknown: ' + resp;
-        #}
+      
   status:
     # TODO: This action is required.
     - script: |
