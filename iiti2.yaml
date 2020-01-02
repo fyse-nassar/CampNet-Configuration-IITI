@@ -17,10 +17,10 @@ actions:
         auth_user: "{username}"
         auth_pass: "{password}"
         accept: Sign In
-      script: |
-       if (!/iiti\.ac\.in/.test(url)) {
-           throw 'unknown: url = ' + url
-        }
+     # script: |
+      # if (!/iiti\.ac\.in/.test(url)) {
+       #    throw 'unknown: url = ' + url
+        #}
       
   status:
     # TODO: This action is required.
