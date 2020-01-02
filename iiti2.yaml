@@ -18,9 +18,12 @@ actions:
         auth_pass: "{password}"
         accept: Sign In
       script: |
-        if (url != 'http://iiti.ac.in') {
-          throw 'unknown: ' + resp;
+       if (!/iiti\.ac\.in/.test(url)) {
+           throw 'unknown: url = ' + url
         }
+       # if (url != 'http://iiti.ac.in') {
+        #  throw 'unknown: ' + resp;
+        #}
   status:
     # TODO: This action is required.
     - script: |
